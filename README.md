@@ -6,7 +6,7 @@ This course is given to 4th-semester DAISY (Data Science, AI, and Intelligent Sy
 ## Create new environment for this course (recommended)
 Creating a new environment for this course with many Python libraries that we will use in the Live Coding sessions is recommended. You can download the `environment.yml` file in this repository, or clone the repository using:
 ```
-git clone https://github.com/florian-huber/big_data_analysis_course.git
+git clone https://github.com/arabanus/big_data_analysis_course_2025
 ```
 Then, in the folder with the `environment.yml` file run:
 ```
