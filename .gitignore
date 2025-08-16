@@ -1,0 +1,22 @@
+# Database files
+*.db
+*.sqlite3
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE and OS specific files
+.idea/
+.vscode/
+*.DS_Store
