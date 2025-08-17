@@ -28,6 +28,22 @@ def setup_database(db_name='images.db'):
         )
     ''')
 
+    # This table will be very large, but highly efficient.
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS shazam_fingerprints (
+            hash TEXT NOT NULL,
+            image_id TEXT NOT NULL,
+            anchor_y INTEGER NOT NULL,
+            anchor_x INTEGER NOT NULL,
+            FOREIGN KEY(image_id) REFERENCES image_index(id)
+        )
+    ''')
+    
+    # --- NEW: Create an index on the 'hash' column ---
+    # This is absolutely critical for the O(1) lookup speed.
+    c.execute("CREATE INDEX IF NOT EXISTS hash_index ON shazam_fingerprints (hash)")
+
+
     conn.commit()
     conn.close()
 
